@@ -1,15 +1,10 @@
 object A:
-  extension [T](x: Option[T])
-    def foo = 1
-    def bar = 1
-  extension [T](x: List[T])
-    def bar = 2
+  extension [T](x: Option[T]) def foo = 1
 
-object B: 
-  extension [T](x: List[T])
-    def foo = 3
+object B:
+  extension [T](x: List[T]) def foo = 3
 
 import A.*
 import B.*
 
-def f = Option(1).bar
+def f = Option(1).foo
